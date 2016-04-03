@@ -10,22 +10,21 @@ import org.springframework.context.ApplicationContext;
  */
 public class XmlBasedBeanCreatorTest {
 
-    private XmlBasedBeanCreator cut;
+    private ApplicationContext cut;
 
     @Before
     public void setUp() {
-        cut = new XmlBasedBeanCreator();
+        cut = XmlBasedBeanCreator.getInstance();
     }
 
     @Test
     public void getContext() {
-        ApplicationContext context = cut.getContext();
-        Assert.assertNotNull(context);
+        Assert.assertNotNull(cut);
     }
 
     @Test
     public void helloWorldBean() {
-        HelloWorld hw = (HelloWorld) cut.getContext().getBean("helloWorld");
+        HelloWorld hw = (HelloWorld) cut.getBean("helloWorld");
         Assert.assertNotNull(hw);
         hw.setMessage("jk");
         String message = hw.getMessage();

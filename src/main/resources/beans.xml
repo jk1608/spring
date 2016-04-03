@@ -9,4 +9,9 @@
         <property name="message" value="Hello World!"/>
     </bean>
 
+    <bean id="helloInitDestroy" class="com.quest.jk.spring.simple.beans.HelloInitDestroy" init-method="init"
+          destroy-method="destroy">
+        <property name="message" value="Hello World!"/>
+    </bean>
+
 </beans>

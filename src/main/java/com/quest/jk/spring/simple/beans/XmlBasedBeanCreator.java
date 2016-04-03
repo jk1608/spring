@@ -8,17 +8,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class XmlBasedBeanCreator {
 
-    private ApplicationContext context;
+    private static ApplicationContext context;
 
-    public ApplicationContext getContext() {
+    public static ApplicationContext getInstance() {
+        if (context == null) {
+            context = new ClassPathXmlApplicationContext("beans.xml");
+        }
         return context;
     }
 
-    protected void setContext(final ApplicationContext context) {
-        this.context = context;
-    }
-
-    public XmlBasedBeanCreator() {
-        context = new ClassPathXmlApplicationContext("beans.xml");
-    }
 }
