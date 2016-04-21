@@ -14,7 +14,7 @@ public class XmlBasedBeanCreatorTest {
 
     @Before
     public void setUp() {
-        cut = XmlBasedBeanCreator.getInstance();
+        cut = XmlBasedBeanCreator.getContext("beans.xml");
     }
 
     @Test

@@ -11,7 +11,7 @@ import org.springframework.context.ApplicationContext;
 public class HelloInitDestroyTest {
     private HelloInitDestroy cut;
 
-    private ApplicationContext context = XmlBasedBeanCreator.getInstance();
+    private ApplicationContext context = XmlBasedBeanCreator.getContext("beans.xml");
 
     @Before
     public void before() {
