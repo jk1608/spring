@@ -21,7 +21,7 @@ public class ChildBeanTest {
     }
 
     @Test
-    public void beanProcessorExample() {
+    public void childBean() {
         Assert.assertNotNull(cut);
         Assert.assertEquals("child-property1", cut.getProperty1());
         Assert.assertEquals("parent-property2", cut.getProperty2());
