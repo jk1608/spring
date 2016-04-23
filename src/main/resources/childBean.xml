@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="parentBean" class="com.quest.jk.spring.simple.beans.ParentBean">
+        <property name="property1" value="parent-property1"/>
+        <property name="property2" value="parent-property2"/>
+    </bean>
+
+    <bean id="childBean" class="com.quest.jk.spring.simple.beans.ChildBean" parent="parentBean">
+        <property name="property1" value="child-property1"/>
+        <property name="property3" value="child-property3"/>
+    </bean>
+
+</beans>
